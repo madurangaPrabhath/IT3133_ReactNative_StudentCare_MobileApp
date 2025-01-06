@@ -6,6 +6,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import Home from "./components/Home";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <View style={styles.container}>
             <Home />
             <Login />
+            <Profile />
           </View>
         </NavigationContainer>
       </PaperProvider>
