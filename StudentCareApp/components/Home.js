@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BottomNavigation, Text } from "react-native-paper";
+import { BottomNavigation } from "react-native-paper";
 
 import Profile from "./Profile";
 import Courses from "./Courses";
@@ -9,7 +9,7 @@ export default function Home({ route }) {
   const { student } = route.params;
 
   const [index, setIndex] = useState(0);
-  const [routes] = useState([
+  const routes = [
     {
       key: "profile",
       title: "Profile",
@@ -28,7 +28,7 @@ export default function Home({ route }) {
       focusedIcon: "book-open",
       unfocusedIcon: "book-open-outline",
     },
-  ]);
+  ];
 
   const renderScene = BottomNavigation.SceneMap({
     profile: () => <Profile student={student} />,
